@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Festivite - Crie seu convite digital</title>
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Leckerli+One&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-layout">
+        <!-- Painel da marca -->
+        <div class="brand-panel">
+          <div class="brand-background">
+            <img
+              class="aside-img"
+              src="./assets/Background.png"
+              alt="Background"
+              width="400"
+              height="728"
+            />
+          </div>
+          <div class="brand-content">
+            <div class="logo">
+              <img src="./assets/images/Logo.svg" alt="Logo Crie seu Convite" />
+            </div>
+            <div class="brand-text">
+              <h1 class="brand-title">Festivite</h1>
+              <p class="brand-subtitle">
+                Crie um convite digital para o seu evento
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Painel de criação de convite -->
+        <form
+          method="post"
+          enctype="multipart/form-data"
+          style="overflow-y: auto; width: 100%"
+        >
+          <div class="invite-panel">
+            <h1 class="page-title">Crie seu convite</h1>
+            <div class="forms-container">
+              <!-- Seção Sobre o evento -->
+              <section class="form-section">
+                <div class="section-header">
+                  <img
+                    src="assets/icons/calendar.svg"
+                    alt=" Descreva sobre o Convite"
+                  />
+                  <h2 class="section-title">Sobre o evento</h2>
+                </div>
+                <div class="form-grid">
+                  <!-- Título do evento -->
+                  <div class="form-group full-width">
+                    <label for="event-title">Título</label>
+                    <input
+                      type="text"
+                      id="event-title"
+                      class="text-input"
+                      placeholder="Nome do evento"
+                      required
+                    />
+                  </div>
+                  <!-- Data de início -->
+                  <div class="form-group half-width">
+                    <label for="event-start">Início</label>
+                    <input
+                      type="date"
+                      id="event-start"
+                      class="text-input"
+                      placeholder="DD/MM/AAAA"
+                    />
+                  </div>
+                  <!-- Data de fim -->
+                  <div class="form-group half-width">
+                    <label for="event-end">Fim</label>
+                    <input
+                      type="date"
+                      id="event-end"
+                      class="text-input"
+                      placeholder="DD/MM/AAAA"
+                    />
+                  </div>
+                  <!-- Tipo de evento -->
+                  <div class="form-group half-width">
+                    <div class="segmented-control">
+                      <label for="event-type">Tipo</label>
+                      <div class="segmented-options">
+                        <div class="segmented-background"></div>
+                        <div
+                          class="segmented-option active"
+                          data-value="presencial"
+                        >
+                          <img
+                            class="segmented-icon"
+                            src="./assets/icons/building-2.svg"
+                            alt="Evento Presencial"
+                          />
+                          <span>Presencial</span>
+                        </div>
+                        <div
+                          class="segmented-option inactive"
+                          data-value="online"
+                        >
+                          <img
+                            class="segmented-icon"
+                            src="./assets/icons/video.svg"
+                            alt="Evento On-line"
+                          />
+                          <span>Online</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Local ou link -->
+                  <div class="form-group half-width">
+                    <label for="event-location">Local</label>
+                    <input
+                      type="text"
+                      id="event-location"
+                      class="text-input"
+                      placeholder="Link ou endereço"
+                    />
+                  </div>
+
+                  <!-- Descrição -->
+                  <div class="form-group full-width">
+                    <label for="event-description">Descrição</label>
+                    <textarea
+                      id="event-description"
+                      class="text-area"
+                      placeholder="Escreva sobre os detalhes do evento"
+                    ></textarea>
+                  </div>
+                </div>
+              </section>
+              <!-- Seção Personalização -->
+              <section class="form-section">
+                <div class="section-header">
+                  <img
+                    class="section-icon"
+                    src="./assets/icons/paintbrush-vertical.svg"
+                    alt="Personalização"
+                  />
+                  <h2 class="section-title">Personalização</h2>
+                </div>
+
+                <div class="form-grid">
+                  <!-- Seleção de cor principal -->
+                  <div class="color-selection">
+                    <label>Cor principal</label>
+                    <div class="color-options">
+                      <div class="color-option selected" data-color="#59B2FF">
+                        <div
+                          class="color-circle"
+                          style="background-color: #59b2ff"
+                        ></div>
+                      </div>
+                      <div class="color-option" data-color="#6A59FF">
+                        <div
+                          class="color-circle"
+                          style="background-color: #6a59ff"
+                        ></div>
+                      </div>
+                      <div class="color-option" data-color="#B259FF">
+                        <div
+                          class="color-circle"
+                          style="background-color: #b259ff"
+                        ></div>
+                      </div>
+                      <div class="color-option" data-color="#FF59F9">
+                        <div
+                          class="color-circle"
+                          style="background-color: #ff59f9"
+                        ></div>
+                      </div>
+                      <div class="color-option" data-color="#FF598B">
+                        <div
+                          class="color-circle"
+                          style="background-color: #ff598b"
+                        ></div>
+                      </div>
+                      <div class="color-option" data-color="#FF5959">
+                        <div
+                          class="color-circle"
+                          style="background-color: #ff5959"
+                        ></div>
+                      </div>
+                      <div class="color-option" data-color="#FF8B59">
+                        <div
+                          class="color-circle"
+                          style="background-color: #ff8b59"
+                        ></div>
+                      </div>
+                      <div class="color-option" data-color="#FFCD59">
+                        <div
+                          class="color-circle"
+                          style="background-color: #ffcd59"
+                        ></div>
+                      </div>
+                      <div class="color-option" data-color="#E1FF59">
+                        <div
+                          class="color-circle"
+                          style="background-color: #e1ff59"
+                        ></div>
+                      </div>
+                      <div class="color-option" data-color="#59FF91">
+                        <div
+                          class="color-circle"
+                          style="background-color: #59ff91"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Seleção de tema -->
+                  <div class="theme-selection">
+                    <label>Tema do evento</label>
+                    <div class="theme-options">
+                      <div
+                        class="theme-option selected"
+                        data-theme="aniversario"
+                      >
+                        <div class="theme-image">
+                          <img
+                            src="/assets/images/Image.png"
+                            alt="Aniversário"
+                          />
+                        </div>
+                        <div class="theme-label">Aniversário</div>
+                      </div>
+
+                      <div class="theme-option" data-theme="infantil">
+                        <div class="theme-image">
+                          <img
+                            src="/assets/images/Image-1.png"
+                            alt="Infantil"
+                          />
+                        </div>
+                        <div class="theme-label">Infantil</div>
+                      </div>
+
+                      <div class="theme-option" data-theme="formatura">
+                        <div class="theme-image">
+                          <img
+                            src="/assets/images/Image-2.png"
+                            alt="Formatura"
+                          />
+                        </div>
+                        <div class="theme-label">Formatura</div>
+                      </div>
+
+                      <div class="theme-option" data-theme="casamento">
+                        <div class="theme-image">
+                          <img
+                            src="/assets/images/Image-3.png"
+                            alt="Casamento"
+                          />
+                        </div>
+                        <div class="theme-label">Casamento</div>
+                      </div>
+
+                      <div class="theme-option" data-theme="cha-de-bebe">
+                        <div class="theme-image">
+                          <img
+                            src="/assets/images/Image-4.png"
+                            alt="Chá de bebê"
+                          />
+                        </div>
+                        <div class="theme-label">Chá de bebê</div>
+                      </div>
+
+                      <div class="theme-option" data-theme="cha-de-panela">
+                        <div class="theme-image">
+                          <img
+                            src="/assets/images/Image-5.png"
+                            alt="Chá de panela"
+                          />
+                        </div>
+                        <div class="theme-label">Chá de panela</div>
+                      </div>
+
+                      <div class="theme-option" data-theme="carnaval">
+                        <div class="theme-image">
+                          <img
+                            src="/assets/images/Image-6.png"
+                            alt="Carnaval"
+                          />
+                        </div>
+                        <div class="theme-label">Carnaval</div>
+                      </div>
+
+                      <div class="theme-option" data-theme="pascoa">
+                        <div class="theme-image">
+                          <img src="/assets/images/Image-7.png" alt="Páscoa" />
+                        </div>
+                        <div class="theme-label">Páscoa</div>
+                      </div>
+
+                      <div class="theme-option" data-theme="sao-joao">
+                        <div class="theme-image">
+                          <img
+                            src="/assets/images/Image-8.png"
+                            alt="São joão"
+                          />
+                        </div>
+                        <div class="theme-label">São João</div>
+                      </div>
+
+                      <div class="theme-option" data-theme="halloween">
+                        <div class="theme-image">
+                          <img
+                            src="/assets/images/Image-9.png"
+                            alt="Halloween"
+                          />
+                        </div>
+                        <div class="theme-label">Halloween</div>
+                      </div>
+
+                      <div class="theme-option" data-theme="natal">
+                        <div class="theme-image">
+                          <img src="/assets/images/Image-10.png" alt="Natal" />
+                        </div>
+                        <div class="theme-label">Natal</div>
+                      </div>
+
+                      <div class="theme-option" data-theme="outro">
+                        <div class="theme-image">
+                          <img
+                            src="/assets/images/Image-11.png"
+                            alt="Ex Ano Novo"
+                          />
+                        </div>
+                        <div class="theme-label">Outro</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Alternador de estilo -->
+                  <div class="switch-toggle">
+                    <label for="style-toggle">Estilo</label>
+                    <div class="toggle-container">
+                      <div class="toggle-switch" id="style-toggle">
+                        <div class="toggle-knob"></div>
+                      </div>
+                      <!-- Substituir a div por um input real -->
+                      <label for="style-toggle" class="toggle-container">
+                        <span class="toggle-label">Escuro</span>
+                      </label>
+                    </div>
+                  </div>
+                  <!-- Upload de imagem -->
+                  <div class="file-input">
+                    <label for="cover-image">Foto de capa</label>
+                    <div class="file-button-icon">
+                      <img
+                        class="button-icon"
+                        src="./assets/icons/upload.svg"
+                        alt="Ícone de upload"
+                      />
+                      <input
+                        type="file"
+                        id="cover-image"
+                        accept="image/*"
+                        class="file-upload"
+                        placeholder="Selecione arquivo"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- Seção Dados para contato -->
+              <section class="form-section">
+                <div class="section-header">
+                  <img
+                    class="section-icon"
+                    src="./assets/icons/contact.svg"
+                    alt="Dados para contato"
+                  />
+                  <h2 class="section-title">Dados para contato</h2>
+                </div>
+
+                <div class="form-grid">
+                  <!-- Nome -->
+                  <div class="form-group full-width">
+                    <label for="contact-name">Nome</label>
+                    <input
+                      type="text"
+                      id="contact-name"
+                      class="text-input error"
+                      placeholder="Nome completo"
+                      required
+                    />
+                    <div class="error-message">
+                      <img
+                        src="./assets/icons/circle-alert.svg"
+                        width="16"
+                        height="16"
+                        alt="Erro"
+                      />
+                      <span>Este campo é obrigatório</span>
+                    </div>
+                  </div>
+                  <!-- E-mail -->
+                  <div class="form-group half-width">
+                    <label for="contact-email">E-mail</label>
+                    <input
+                      type="email"
+                      id="contact-email"
+                      class="text-input"
+                      placeholder="exemplo@email.com"
+                    />
+                  </div>
+                  <!-- Telefone -->
+                  <div class="form-group half-width">
+                    <label for="contact-phone">Telefone</label>
+                    <input
+                      type="tel"
+                      id="contact-phone"
+                      class="text-input"
+                      placeholder="(99) 99999-9999"
+                    />
+                  </div>
+                </div>
+              </section>
+              <!-- Rodapé com checkboxes e botão -->
+              <div class="action-section">
+                <div class="checkbox-group" data-min="1">
+                  <label class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      class="real-checkbox"
+                      name="terms"
+                      required
+                      checked
+                    />
+                    <div class="custom-checkbox checked">
+                      <div class="check-icon"></div>
+                    </div>
+                    <span class="checkbox-label">
+                      Eu concordo com os Termos e Condições e com a Política de
+                      Privacidade
+                    </span>
+                  </label>
+
+                  <label class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      class="real-checkbox"
+                      name="email-updates"
+                      checked
+                    />
+                    <div class="custom-checkbox checked">
+                      <div class="check-icon"></div>
+                    </div>
+                    <span class="checkbox-label">
+                      Aceito receber atualizações e promoções por e-mail
+                    </span>
+                  </label>
+
+                  <label class="checkbox-item">
+                    <input
+                      type="checkbox"
+                      class="real-checkbox"
+                      name="sms-updates"
+                      checked
+                    />
+                    <div class="custom-checkbox checked">
+                      <div class="check-icon"></div>
+                    </div>
+                    <span class="checkbox-label">
+                      Aceito receber atualizações e promoções por SMS
+                    </span>
+                  </label>
+
+                  <div
+                    class="checkbox-error error-message"
+                    style="display: none"
+                  ></div>
+                </div>
+
+                <button type="submit" class="generate-button">
+                  <img
+                    class="button-icon"
+                    src="./assets/icons/ticket.svg"
+                    alt="Clique para gerar o convite."
+                  />
+                  <span>Gerar convite</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
